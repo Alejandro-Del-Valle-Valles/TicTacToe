@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: "Robot", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+button,
+select,
+input,
+textarea {
+    font: inherit;
+}
+
+#game_screen {
+    background-color: #F2F3F2;
+    display: inline-grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-content: center;
+    aspect-ratio: 1 / 1;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#dificulty {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#player {
+    margin: 15px;
+    display: flex;
+    gap: 20%;
+}
+
+/* Hide the radio buttons without disabling them */
+#player input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* Style the labels as buttons */
+#player label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #dadce0;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Highlight the selected option */
+#player input[type="radio"]:checked + label {
+    background-color: #e8f0fe;
+    border-color: #4285f4;
+    color: #1967d2;
+}
+
+/* Show keyboard focus */
+#player input[type="radio"]:focus-visible + label {
+    outline: 2px solid #4285f4;
+    outline-offset: 3px;
+}
+
+/* Hover effect */
+#player label:hover {
+    border-color: #4285f4;
+}
+
+
+#board {
+    background-color: #7FC8D6;
+    display: inline-flex;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-content: center;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#board td {
+    border: 5px solid #2A8FB0;
+    padding: 0;
+}
+
+#board tr:first-child td {
+    border-top: none;
+}
+
+#board tr:last-child td {
+    border-bottom: none;
+}
+
+#board td:first-child {
+    border-left: none;
+}
+
+#board td:last-child {
+    border-right: none;
+}
+
+.board_btn {
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: transparent;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.simbol-x {
+    color: #6C8187;
+}
+
+.simbol-o {
+    color: #FFFFFF;
+}
+
+#restart {
+    color: #4E9A96;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#restart:hover {
+    background-color: #D5D9D6;
+}

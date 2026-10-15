@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
-    <link type="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Game created by Alejandro del Valle alias AlejAndroiDeVV-->
@@ -20,9 +20,14 @@
                     <option value="hard">Dificil</option>
                     <option value="friend">Con un Amigo</option>
                 </optgroup>
-            </select>
+            </select><br>
+            <div id="player">
+                <input type="radio" id="player-x" class="player" name="simbol" value="true">
+                <label for="player-x">X</label>
+                <input type="radio" id="player-o" class="player" name="simbol" value="false">
+                <label for="player-o">O</label>
+            </div>
             <h2>Turno de <b id="game_turn">X</b></h2>
-            <button id="restart">Reiniciar Partida</button>
         </div>
         
         <!-- Game Board -->
@@ -43,6 +48,7 @@
                 <td id="position_8"><button type="button" class="board_btn" value="8"></button></td>
             </tr>
         </table>
+        <button id="restart">Reiniciar Partida</button>
     </div>
 </body>
 <script src="game.js"></script>
